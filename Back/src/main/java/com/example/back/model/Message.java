@@ -26,5 +26,5 @@ public class Message {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="session_id")
-    private ChatSession session;
+    private Session session;
 }

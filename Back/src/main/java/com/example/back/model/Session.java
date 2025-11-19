@@ -12,8 +12,8 @@ import java.util.List;
 
 @Entity
 @Data
-@Table(name = "chat_session")
-public class ChatSession {
+@Table(name = "session")
+public class Session {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -28,6 +28,6 @@ public class ChatSession {
     private LocalDateTime createdAt;
     private LocalDateTime closedAt;
 
-    @OneToMany(mappedBy = "session", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "session", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     List<Message> messages = new ArrayList<>();
 }
