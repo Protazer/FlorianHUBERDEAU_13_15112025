@@ -1,6 +1,6 @@
 # POC YourCarYourWay
 
-![MDD image](front/src/assets/images/your_car_your_way_banner.png)
+![YOURCARYOURWAY image](Front/src/assets/images/your_car_your_way_banner.png)
 
 ## Required dependencies
 
