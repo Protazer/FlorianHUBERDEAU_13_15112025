@@ -1,0 +1,18 @@
+<main>
+ <section class="chatbox">
+   <div class="chatbox__message" [ngClass]="m.sender === userName ? 'my' : 'others'" *ngFor="let m of messages">
+     {{m.sender}} : {{m.content}}
+   </div>
+   <div *ngIf="sessionClosed" class="chatbox__message--closed">
+     Cette session est fermée.
+   </div>
+ </section>
+  <section class="typing_zone">
+    <input class="typing_zone__input" [(ngModel)]="newMessage" [disabled]="sessionClosed" placeholder="Que voulez vous dire ?" />
+    <button class="typing_zone__button" (click)="send()" [disabled]="sessionClosed">Envoyer</button>
+    <button class="typing_zone__button" (click)="closeSession()" [disabled]="sessionClosed" >Fermer la session</button>
+  </section>
+</main>
+
+
+
